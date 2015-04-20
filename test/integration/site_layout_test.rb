@@ -11,7 +11,3 @@ class SiteLayoutTest < ActionDispatch::IntegrationTest
     assert_select "a[href=?]", contact_path
   end
 end
-
-# test "the truth" do
-  #   assert true
-  # end
