@@ -12,4 +12,20 @@ until index == array.length
   index += 1
 end
 
+# save reversed characters to string
 reverse_string = reverse_array.join
+
+#attempting same thing as lines 1-16 in less code -- success
+string = "This is a string in reverse"
+string_reverse = ""
+index = 0
+until index == string.length
+  string_reverse = string_reverse.prepend(string[index])
+  index += 1
+end
+
+# attemping same thing in less lines
+string = "This is a string in reverse"
+index = 0
+reverse_string = ""
+reverse_string = reverse_string.prepend(string[index]) while index < string.length
