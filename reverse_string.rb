@@ -24,8 +24,8 @@ until index == string.length
   index += 1
 end
 
-# attemping same thing in less lines
+# attemping same thing in less lines -- failing
 string = "This is a string in reverse"
 index = 0
 reverse_string = ""
-reverse_string = reverse_string.prepend(string[index]) while index < string.length
+reverse_string = reverse_string.prepend(string[index]) while index < string.length; index += 1
