@@ -12,5 +12,5 @@ until index == -1
   index -= 1
 end
 
-
+# stopped here because the until loop didn't work
   
