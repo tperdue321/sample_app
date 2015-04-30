@@ -29,3 +29,21 @@ string = "This is a string in reverse"
 index = 0
 reverse_string = ""
 reverse_string = reverse_string.prepend(string[index]) while index < string.length; index += 1
+
+# reverses a string and puts it into a new string
+string = "This is a string in reverse"
+reverse_string = ""
+string.each_char { |c| string_reverse = string_reverse.prepend(c) }
+
+# fizzbuzz problem
+for num in 0..1000
+  if num % 15 == 0
+    puts "fizzbuzz"
+  elsif num % 5 == 0
+    puts "buzz"
+  elsif num % 3 == 0
+    puts "fizz"
+  else 
+    puts num
+  end
+end
