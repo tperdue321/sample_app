@@ -46,7 +46,24 @@ r = ""
     r_str(x, y, z)
   end
 
+# reverse string prob using recursion 
+s = "This is a string"
+r = ""
+  def r_str(x)
+    x.length.times do
+    x = x.prepend(x[x.first])
+    x = x.chop(x[1])
+    end
+  end
   
+s = "This is a string"
+r = ""
+def r_str(x)
+    x = x.concat(x[x.last])
+    x = x.delete(x[x.last - 1])
+end
+    
+    
 
 
 # fizzbuzz problem using for loop -- success
