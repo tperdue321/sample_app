@@ -35,7 +35,21 @@ string = "This is a string in reverse"
 reverse_string = ""
 string.each_char { |c| string_reverse = string_reverse.prepend(c) }
 
-# fizzbuzz problem
+
+# reverse string prob using recursion
+s = "This is a string"
+r = ""
+  def r_str(x, y, z)
+    return y if (x.length == y.length)
+    y = y.prepend(x[z])
+    z += 1
+    r_str(x, y, z)
+  end
+
+  
+
+
+# fizzbuzz problem working
 for num in 0..1000
   if num % 15 == 0
     puts "fizzbuzz"
@@ -47,3 +61,17 @@ for num in 0..1000
     puts num
   end
 end
+
+# failing
+x = 0
+while x > 1001
+x += 1
+x % 15 == 0 puts "fizzbuzz"; x % 5 == 0 puts "buzz"; x % 3 == 0 puts "fizz"; x % == 0 puts x
+x += 1
+end
+
+# fizzbuzz prob
+
+(0..1000).find_all { |n, f, t, a| n % 15 == 0, f % 5 == 0, t % 3 == 0, a % 1 == 0 }
+
+
