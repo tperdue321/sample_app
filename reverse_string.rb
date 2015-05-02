@@ -30,13 +30,13 @@ index = 0
 reverse_string = ""
 reverse_string = reverse_string.prepend(string[index]) while index < string.length; index += 1
 
-# reverses a string and puts it into a new string
+# reverses a string and puts it into a new string -- success
 string = "This is a string in reverse"
 reverse_string = ""
 string.each_char { |c| string_reverse = string_reverse.prepend(c) }
 
 
-# reverse string prob using recursion
+# reverse string prob using recursion -- success
 s = "This is a string"
 r = ""
   def r_str(x, y, z)
@@ -49,7 +49,7 @@ r = ""
   
 
 
-# fizzbuzz problem working
+# fizzbuzz problem -- success
 for num in 0..1000
   if num % 15 == 0
     puts "fizzbuzz"
