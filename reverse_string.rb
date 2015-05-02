@@ -49,7 +49,7 @@ r = ""
   
 
 
-# fizzbuzz problem -- success
+# fizzbuzz problem using for loop -- success
 for num in 0..1000
   if num % 15 == 0
     puts "fizzbuzz"
@@ -62,16 +62,18 @@ for num in 0..1000
   end
 end
 
-# failing
+#  fizzbuzz problem using while loop -- success
 x = 0
-while x > 1001
-x += 1
-x % 15 == 0 puts "fizzbuzz"; x % 5 == 0 puts "buzz"; x % 3 == 0 puts "fizz"; x % == 0 puts x
-x += 1
+while x > 1001 do
+  puts "fizzbuzz" if x % 15 == 0 
+  puts "buzz" if x % 5 == 0 
+  puts "fizz" if x % 3 == 0 
+  puts x if x % == 0
+  x += 1
 end
 
 # fizzbuzz prob
 
-(0..1000).find_all { |n, f, t, a| n % 15 == 0, f % 5 == 0, t % 3 == 0, a % 1 == 0 }
+(0..1000).find_all { |n, f, t, a| n % 15 == 0 f % 5 == 0 t % 3 == 0 a % 1 == 0 }
 
 
