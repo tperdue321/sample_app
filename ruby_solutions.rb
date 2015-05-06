@@ -24,12 +24,6 @@ until index == string.length
   index += 1
 end
 
-# attemping same thing in less lines -- failing
-string = "This is a string in reverse"
-index = 0
-reverse_string = ""
-reverse_string = reverse_string.prepend(string[index]) while index < string.length; index += 1
-
 # reverses a string and puts it into a new string -- success
 string = "This is a string in reverse"
 reverse_string = ""
@@ -39,31 +33,13 @@ string.each_char { |c| string_reverse = string_reverse.prepend(c) }
 # reverse string prob using recursion -- success
 s = "This is a string"
 r = ""
+num = 0
   def r_str(x, y, z)
     return y if (x.length == y.length)
     y = y.prepend(x[z])
     z += 1
     r_str(x, y, z)
   end
-
-# reverse string prob using recursion 
-s = "This is a string"
-r = ""
-  def r_str(x)
-    x.length.times do
-    x = x.prepend(x[x.first])
-    x = x.chop(x[1])
-    end
-  end
-  
-s = "This is a string"
-r = ""
-def r_str(x)
-    x = x.concat(x[x.last])
-    x = x.delete(x[x.last - 1])
-end
-    
-    
 
 
 # fizzbuzz problem using for loop -- success
@@ -79,18 +55,16 @@ for num in 0..1000
   end
 end
 
-#  fizzbuzz problem using while loop -- success
+#  fizzbuzz problem using until loop -- success
 x = 0
-while x > 1001 do
-  puts "fizzbuzz" if x % 15 == 0 
-  puts "buzz" if x % 5 == 0 
-  puts "fizz" if x % 3 == 0 
-  puts x if x % == 0
+until x == 1000
   x += 1
-end
-
-# fizzbuzz prob
-
-(0..1000).find_all { |n, f, t, a| n % 15 == 0 f % 5 == 0 t % 3 == 0 a % 1 == 0 }
-
-
+  if x % 15 == 0
+      puts "fizzbuzz"
+  elsif x % 5 == 0
+    puts "buzz"
+  elsif x % 3 == 0
+    puts "fizz"
+  else
+    puts x
+  end
