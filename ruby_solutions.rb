@@ -68,3 +68,18 @@ until x == 1000
   else
     puts x
   end
+  
+  # successfully reverse a string without calling reverse
+  str = "this is a string in reverse"
+  r_str = ""
+  # argument r_str must be an empty string
+  def r(str, r_str)
+    r_str = r_str.prepend(str.slice!(str.first))
+    if str.empty?
+      str = r_str
+      return str
+    else
+    r(str, r_str)
+    end
+  end
+  
