@@ -11,11 +11,15 @@
   <%= render 'layouts/header' %> 
   <div class="container">
       <% flash.each do |message_type, message| %>
+        <% if message_type == :danger || :warning %>
         <div class="alert alert-<%= message_type %>">
-          <span class="glyphicon glyphicon-exclamation-sign" aria-hidden="true">
-          </span>
-          <span class="sr-only">Error:</span>
-          <%= message %>
+            <span class="glyphicon glyphicon-exclamation-sign" aria-hidden="true">
+            </span>
+            <span class="sr-only">Error:</span>
+        <% else %>
+          <div class="alert alert-<%= message_type %>">
+        <% end %>
+        <%= message %>
         </div>
       <% end %>
     <%= yield %>
