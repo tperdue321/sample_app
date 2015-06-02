@@ -40,6 +40,18 @@ num = 0
     z += 1
     r_str(x, y, z)
   end
+  
+  # reverse string prob using recursion r must be a blank string
+  string = "This is a string in reverse"
+  r = ""
+  def r_str(s, r)
+    r = r.prepend(s.slice!(s.first))
+    if s == ""
+      s = r 
+      return s
+    end
+    r_str(s, r)
+  end
 
 
 # fizzbuzz problem using for loop -- success
