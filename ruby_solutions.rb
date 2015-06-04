@@ -28,6 +28,7 @@ end
 string = "This is a string in reverse"
 reverse_string = ""
 string.each_char { |c| string_reverse = string_reverse.prepend(c) }
+str = r
 
 
 # reverse string prob using recursion -- success
@@ -80,3 +81,4 @@ until x == 1000
   else
     puts x
   end
+end
