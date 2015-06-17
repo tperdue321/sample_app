@@ -37,6 +37,7 @@ gem 'sdoc',                     '0.4.0', group: :doc
 
 gem 'pry-rails',  :group => :development
 gem 'pry-doc',    :group => :development
+gem 'pry-byebug'
 
 # Use Unicorn as the app server
 # gem 'unicorn'
